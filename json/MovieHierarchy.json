@@ -1,0 +1,100 @@
+var movieHierarchy={
+    "about": {
+        "netId": "dingluo"
+    },
+    "folders": [
+        {
+            "level": "2",
+            "id": "2",
+            "name": "Australian",
+            "folders": [
+                {
+                    "level": "3",
+                    "id": "6",
+                    "name": "Australia",
+                    "targets":[
+                        {
+                            "targetId":"8" ,
+                            "targetName":"The Babadook"
+                        }
+                    ]
+                }
+            ]
+        },
+
+        {
+            "level": "2",
+            "id": "3",
+            "name": "Europe",
+            "folders": [
+                {
+                    "level": "3",
+                    "id": "8",
+                    "name": "Germany",
+                    "targets":[
+                        {
+                            "targetId":"2" ,
+                            "targetName":"The Cabinet of Dr. Caligari"
+                        }
+                    ]
+                },
+                {
+                    "level": "3",
+                    "id": "7",
+                    "name": "UK",
+                    "targets":[
+                        {
+                            "targetId":"6" ,
+                            "targetName":"Repulsion"
+                        }
+                    ]
+                }
+
+            ]
+        },
+
+        {
+            "level": "2",
+            "id": "4",
+            "name": "North America", 
+            "folders": [
+                {
+                    "level": "3",
+                    "id": "9",
+                    "name": "USA",
+                    "targets":[
+                        {
+                            "targetId":"9" ,
+                            "targetName":"Frankenstein"
+                        },
+                        {
+                            "targetId":"1" ,
+                            "targetName":"Get Out"
+                        },
+                        {
+                            "targetId":"5" ,
+                            "targetName":"King Kong"
+                        },
+                        {
+                            "targetId": "4",
+                            "targetName": "Nosferatu"
+                        },
+                        {
+                            "targetId":"3" ,
+                            "targetName":"Psycho"
+                        },
+                        {
+                            "targetId":"10" ,
+                            "targetName":"Rosemary's Baby"
+                        },
+                        {
+                            "targetId": "7",
+                            "targetName":"The Bride of Frankenstein"
+                        }
+
+                    ]
+                }
+            ]
+        }             
+    ]
+}

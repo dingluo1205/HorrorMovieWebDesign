@@ -1,0 +1,137 @@
+var movieFullViews={
+    "about": {
+        "netId": "dingluo"
+    },
+	 "movies":[
+	{
+		"id": "1",
+		"title" : "Get Out (2017)",
+		"introduction" : "Now that Chris and his girlfriend, Rose, have reached the meet-the-parents milestone of dating, she invites him for a weekend getaway upstate with Missy and Dean. At first, Chris reads the family's overly accommodating behavior as nervous attempts to deal with their daughter's interracial relationship, but as the weekend progresses, a series of increasingly disturbing discoveries lead him to a truth that he could have never imagined.",
+		"rate" : 0.99,
+		"AudienceScore" : 0.87,
+		"FirstNameWriter" : "Jordan",
+		"LastNameWriter" : "Peele",
+		"FirstNameDirector" : "Jordan",
+		"LastNameDirector" : "Peele",
+		"Actor" : "Daniel Aluuya, Allison William and Werner Krauss",
+		"image": "getout.jpg"
+	},
+		{
+		"id": "2",
+		"title" :"THE CABINET OF DR. CALIGARI" ,
+		"introduction" :"In one of the most influential films of the silent era, Werner Krauss plays the title character, a sinister hypnotist who travels the carnival circuit displaying a somnambulist named Cesare (Conrad Veidt). In one tiny German town, a series of murders coincides with Caligari's visit. When the best friend of hero Francis (Friedrich Feher) is killed, the deed seems to be the outgrowth of a romantic rivalry over the hand of the lovely Jane (Lil Dagover). Francis suspects Caligari, but he is ignored by the police." ,
+		"rate" :"1.00" ,
+		"AudienceScore" : 0.89,
+		"FirstNameWriter" :"Hans" ,
+		"LastNameWriter" : "Janowitz",
+		"FirstNameDirector" :"Robert" ,
+		"LastNameDirector" : "Wiene",
+		"Actor" : "Werner Krauss, Conrad Veidt, Freidrich Feher",
+		"image": "2.jpg"
+	},
+			{
+		"id": "3",
+		"title" : "Psycho",
+		"introduction" :"In 1960, Alfred Hitchcock was already famous as the screen's master of suspense (and perhaps the best-known film director in the world) when he released Psycho and forever changed the shape and tone of the screen thriller. From its first scene, in which an unmarried couple balances pleasure and guilt in a lunchtime liaison in a cheap hotel (hardly a common moment in a major studio film in 1960), Psycho announced that it was taking the audience to places it had never been before, and on that score what followed would hardly disappoint. " ,
+		"rate" :"1.00" ,
+		"AudienceScore" : 0.94,
+		"FirstNameWriter" : "Robert",
+		"LastNameWriter" :"Bloch" ,
+		"FirstNameDirector" :"Alfred" ,
+		"LastNameDirector" :"Hitchcock"  ,
+		"Actor" : "Anthony Perkins, Vera Miles, John Gavin",
+		"image": "3.jpg"
+	},
+			{
+		"id": "4",
+		"title" :"NOSFERATU, A SYMPHONY OF HORROR" ,
+		"introduction" :"F. W. Murnau's landmark vampire film begins in the Carpathian mountains, where real estate agent Hutter has arrived to close a sale with the reclusive Herr Orlok" ,
+		"rate" :0.97 ,
+		"AudienceScore" :0.98 ,
+		"FirstNameWriter" : "Bram",
+		"LastNameWriter" :"Stoker" ,
+		"FirstNameDirector" :"F.W." ,
+		"LastNameDirector" : "Murnau",
+		"Actor" :"Max Schreck, Greta Schroder, Gaustav VonWangehe" ,
+		"image":"4.jpg" 
+	},
+			{
+		"id": "5",
+		"title" : "KING KONG",
+		"introduction" :"Peter Jackson's expansive remake of the 1933 classic follows director Carl Denham (Jack Black) and his crew on a journey from New York City to the ominous Skull Island to film a new movie. Accompanying him are playwright Jack Driscoll (Adrien Brody) and actress Ann Darrow (Naomi Watts), who is whisked away by the monstrous ape, Kong, after they reach the island. The crew encounters dinosaurs and other creatures as they race to rescue Ann, while the actress forms a bond with her simian captor." ,
+		"rate" :0.98 ,
+		"AudienceScore" :0.86 ,
+		"FirstNameWriter" : "Joe",
+		"LastNameWriter" : "Devito",
+		"FirstNameDirector" :"Peter" ,
+		"LastNameDirector" : "Jackson",
+		"Actor" :"Naomi Watts, Peter Jackson, Jack Black" ,
+		"image": "5.jpg"
+	},
+			{
+		"id": "6",
+		"title" :"REPULSION" ,
+		"introduction" : "When Carol, a shy young Belgian, is left alone for a few days in the Kensington flat she shares with her sister, she begins to withdraw into a reclusive existence where innocuous everyday realities are distorted by deep-seated anxieties.",
+		"rate" : "1.00",
+		"AudienceScore" :0.87 ,
+		"FirstNameWriter" : "David",
+		"LastNameWriter" : "Stone",
+		"FirstNameDirector" :"Roman" ,
+		"LastNameDirector" : "Polanski",
+		"Actor" : "Catherine Deneue, Ian Hendry, Yvonne Furneaux",
+		"image": "6.jpg"
+	},
+			{
+		"id": "7",
+		"title" : "The Bride of Frankenstein",
+		"introduction" :"After recovering from injuries sustained in the mob attack upon himself and his creation, Dr. Frankenstein (Colin Clive) falls under the control of his former mentor, Dr. Pretorius (Ernest Thesiger), who insists the now-chastened doctor resume his experiments in creating new life. Meanwhile, the Monster (Boris Karloff) remains on the run from those who wish to destroy him without understanding that his intentions are generally good despite his lack of socialization and self-control." ,
+		"rate" : "1.00",
+		"AudienceScore" : 0.87,
+		"FirstNameWriter" :"Mary" ,
+		"LastNameWriter" : "Shelley",
+		"FirstNameDirector" :"James" ,
+		"LastNameDirector" : "Whale",
+		"Actor" : "Boris Karloff, Elsa Lanchester, Colin Clive",
+		"image": "7.jpg"
+	},
+			{
+		"id": "8",
+		"title" :"THE BABADOOK" ,
+		"introduction" :"Six years after the violent death of her husband, Amelia (Essie Davis) is at a loss. She struggles to discipline her 'out of control' 6 year-old, Samuel (Noah Wiseman), a son she finds impossible to love. Samuel's dreams are plagued by a monster he believes is coming to kill them both. When a disturbing storybook called 'The Babadook' turns up at their house, Samuel is convinced that the Babadook is the creature he's been dreaming about. " ,
+		"rate" : 0.98,
+		"AudienceScore" :0.72 ,
+		"FirstNameWriter" :"Jennifer" ,
+		"LastNameWriter" : "Kent",
+		"FirstNameDirector" :"Jennifer" ,
+		"LastNameDirector" : "Kent",
+		"Actor" :"Essie Davis, Noah Wiseman, Daniel Henshall" ,
+		"image": "8.jpg"
+	},
+			{
+		"id": "9",
+		"title" :"FRANKENSTEIN" ,
+		"introduction":"This iconic horror film follows the obsessed scientist Dr. Henry Frankenstein (Colin Clive) as he attempts to create life by assembling a creature from body parts of the deceased. Aided by his loyal misshapen assistant, Fritz (Dwight Frye), Frankenstein succeeds in animating his monster (Boris Karloff), but, confused and traumatized, it escapes into the countryside and begins to wreak havoc. Frankenstein searches for the elusive being, and eventually must confront his tormented creation.",
+		"rate" : "1.00",
+		"AudienceScore" :0.87 ,
+		"FirstNameWriter" : "Garret",
+		"LastNameWriter" :"Fort" ,
+		"FirstNameDirector" : "Arthur",
+		"LastNameDirector" :"Edeson" ,
+		"Actor" :"Boris Karloff, Colin Clive, Dwight Frye" ,
+		"image": "9.jpg"
+	},
+			{
+		"id": "10",
+		"title" : "ROSEMARY'S BABY",
+		"introduction" : "In Roman Polanski's first American film, adapted from Ira Levin's horror bestseller, a young wife comes to believe that her offspring is not of this world. Waifish Rosemary Woodhouse (Mia Farrow) and her struggling actor husband, Guy (John Cassavetes), move into the Bramford, an old New York City apartment building with an ominous reputation and only elderly residents.",
+		"rate" :0.99 ,
+		"AudienceScore" : 0.87,
+		"FirstNameWriter" : "Roman",
+		"LastNameWriter" : "Polanski",
+		"FirstNameDirector" : "Roman",
+		"LastNameDirector" :"Polanski" ,
+		"Actor" :"Mia Farrow, John Cassavetes, Ruth Gordon" ,
+		"image": "10.jpg"
+	}
+]
+}

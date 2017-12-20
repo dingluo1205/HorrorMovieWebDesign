@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html ng-app="angularApp" ng-controller="theInfoBase">
+<style>
+body
+{
+color:white;
+}
+</style>
+
+<head>
+  <title>Horror Movie for You!</title>
+  <meta charset="utf-8"></meta>
+  <link href="css/bootstrap.min.css" rel="stylesheet"></link>
+  <link href="css/movie.css" rel="stylesheet"></link>
+</head>
+
+<body style="background-image:url(images/background.jpg)">
+
+  <p> <h1><center> Welcome to the <b><font color=#b70000 face="nosifer">Horror World</b></font></center> </h1></p>
+  <p> <h3> <center>This is Ding's movie collection about top 10 horror movies  </center> </h3></p>
+    
+  <div class="container movieOuterContainer">
+      <div ng-include="'globalNavArea'"></div>
+      <div ng-include="'pageMovieFullView'" ng-if="pageType==='fullViews'"></div>
+      <div ng-include="'pageMovieHome'" ng-if="pageType==='home'"></div>
+      <div ng-include="'pageMovieAbout'" ng-if="pageType==='about'"></div>
+  </div>
+
+    
+  <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="js/angular.min.js"></script>
+  <script type="text/javascript" src="js/HorrorMovieAngularApp.js"></script>
+  <script type="text/javascript" src="js/angular-sanitize.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script  src="json/MovieData.json"></script>
+  <script  src="json/YearIndex.json"></script>
+  <script  src="json/MovieHierarchy.json"></script>
+  <script  src="json/MovieAssociations.json"></script>
+  <script  src="json/MovieSequence.json"></script>
+  <script  src="json/AboutPage.json"></script>
+  <script src='http://use.edgefonts.net/butcherman.js'></script>
+  <script src='http://use.edgefonts.net/nosifer.js'></script>
+  
+<script type="text/ng-template" id="globalNavArea">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                    aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                 </button>
+                <a class="navbar-brand" href="#" ng-click="setCurrentPageAndNav('about','')">About</a>
+                <a class="navbar-brand" href="#" ng-click="setCurrentPageAndNav('home','')">myMovies</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li ng-class="{active: navType=='hierarchy'}"><a ng-class="{navLink: navType!='hierarchy'}" ng-click="setCurrentPageAndNav('fullViews','hierarchy')">Movies by Location</a></li>
+                    <li ng-class="{active: navType=='index'}"><a ng-class="{navLink: navType!='index'}" ng-click="setCurrentPageAndNav('fullViews','index')">Movies by Year</a></li>
+                    <li ng-class="{active: navType=='sequence'}"><a ng-class="{navLink: navType!='sequence'}" ng-click="setCurrentPageAndNav('fullViews','sequence')">What Type of Movies to Watch</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</script>
+
+<script type="text/ng-template" id="localNavSwitch">
+    <div>
+      <div ng-if="navType==='hierarchy'">
+        <p class="navHeader"><u>Movies by location</u></p>
+        <div ng-repeat="folder in folders" ng-include="'folderHierarchy'"></div>
+      </div>
+      <div ng-if="navType==='index'">
+        <p class="navHeader"><u>Movies by Year</u></p>
+        <div class="movieIndex" ng-include="'movieIndex'"></div>
+      </div>
+      <div ng-if="navType==='sequence'">
+        <p class="navHeader">What type of movies to watch</p>
+        <div class="movieSequences" ng-include="'movieSequences'"></div>
+      </div>
+    </div>
+</script>
+
+<script type="text/ng-template" id="movieItemFullViews">
+    <div class="fullViewDiv" ng-repeat="movie in movies" ng-show="currentMovieId===movie.id">
+      <h1>{{movie.title}}</h1>
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-3">
+            <!--image-->
+            <div class="imageContainer"><img class="img-responsive center-block" ng-src="images/{{movie.image}}" /></div>
+          </div>
+          <div class="col-sm-9">
+            <p><b>Rate</b>: {{movie.rate}}</p>
+            <p><b>Audience Score</b>: {{movie.AudienceScore}}</p>
+            <p><b>Writer</b>: {{movie.FirstNameWriter}} {{movie.LastNameWriter}}</p>
+            <p><b>Director</b>: {{movie.FirstNameDirector}} {{movie.LastNameDirector}}</p>
+            <p><b>Actor </b>: {{movie.Actor}}</p>
+          </div>
+        </div>
+        <hr/>
+
+        <div class="row">
+          <div class="col-sm-8">
+            <div ng-bind-html="movie.introduction"></div>
+          </div>
+          <div class="col-sm-4">
+            <div class="movieAssociations" ng-include="'movieAssociations'"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+</script>
+
+<script type="text/ng-template" id="movieIndex">
+    <div ng-repeat="year in years">
+      <p class="indexTerm">{{year.yearName}}</p>
+      <p class="indexItemRef" ng-repeat="movie in year.movies"><a href="#" ng-click="setCurrentMovieId(movie.movieId)">{{movie.movieName}}</a></p>
+    </div>
+</script>
+
+<script type="text/ng-template" id="folderHierarchy">
+    <p class="hLevel{{folder.level}}">{{folder.name }} </p>
+    <p ng-repeat="target in folder.targets" class="hLevel{{1 * folder.level + 1}}"><a href="#" ng-click="setCurrentMovieId(target.targetId)">{{target.targetName}}</a> </p>
+    <div ng-repeat="folder in folder.folders" ng-include="'folderHierarchy'"></div>
+</script>
+
+<script type="text/ng-template" id="movieAssociations">
+    <div ng-repeat="association in associations | filter:{id: currentMovieId}:true">
+      <p>If you like {{association.name}}, try:</p>
+
+      <ul>
+        <li ng-repeat="relatedMovie in association.relatedMovies">
+          <a href="#" ng-click="setCurrentMovieId(relatedMovie.movieId)">{{relatedMovie.movieName}}</a></li>
+      </ul>
+    </div>
+</script>
+
+
+<script type="text/ng-template" id="movieSequences">
+
+    <div class="panel-group" id="accordion">
+      <div class="panel panel-default" ng-repeat="sequence in sequences">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#seq{{$index}}">{{sequence.seqName}}</a>
+          </h4>
+        </div>
+        <div id="seq{{$index}}" class="panel-collapse collapse">
+          <div class="panel-body">
+            <p ng-repeat="movie in sequence.movies">{{movie.movieLable}}: <a href="#" ng-click="setCurrentMovieId(movie.movieId)">{{movie.movieName}}</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+</script>
+
+
+<script type="text/ng-template" id="pageMovieFullView">
+    <div class="row-fluid">
+      <div class="col-sm-3 localNavArea">
+        <div ng-include="'localNavSwitch'"></div>
+      </div>
+      <div class="col-sm-9 itemArea">
+        <div class="movieItemFullViews" ng-include="'movieItemFullViews'"></div>
+      </div>
+    </div>   
+</script>
+
+<script type="text/ng-template" id="pageMovieHome">
+    <div class="content area">
+      <div class="partialViewDiv" ng-repeat="movie in movies">
+        <img class="partialViewImage" ng-src="images/{{movie.image}}" ng-click="setCurrentPageNavAndMovie('fullViews','hierarchy',movie.id)"
+        />
+        <p><b>{{movie.title}} </b></p>
+        <p><b>Total Rate</b>: {{movie.rate}}</p>
+        <p><b>Audience Score</b>: {{movie.AudienceScore}}</p>
+      </div>
+    </div>
+</script>
+
+<script type="text/ng-template" id="pageMovieAbout">
+    <div class="content area">
+      <div class = "aboutPageDiv" ng-repeat="about in abouts">
+        <div class='row-fluid'>
+           <div class="col-sm-4">
+              <div class="imageContainer"><img class="img-responsive center-block" ng-src="images/{{about.image}}" /></div>
+           </div>
+        <p> <center> <b> <h1> Written by - </b> <font color=#b70000 face="nosifer"> {{about.Author}} </font></h1></center></p>
+        <p> <b> <h4> <font color=#b70000 face="nosifer"> Date  </font> </h4></b> {{about.Date}} </p>
+        <p> <b> <h4> <font color=#b70000 face="nosifer"> About Me  </font> </h4></b> {{about.Introduction}}</p>
+        <p> <b> <h4> <font color=#b70000 face="nosifer"> About The Page  </font> </h4></b> {{about.Page}}</p>
+        <p> <b> <h4> <font color=#b70000 face="nosifer"> Data Source </font> </h4></b> {{about.Source}}</p>
+        <p> <b> <h4> <font color=#b70000 face="nosifer"> Instructors </font> </h4></b> {{about.Instructors}}</p>
+        </div>
+      </div>
+    </div>
+</script>
+
+</body>
+
+</html>

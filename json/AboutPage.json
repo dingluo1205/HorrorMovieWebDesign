@@ -1,0 +1,17 @@
+var AboutPage={
+    "about": {
+        "netId": "dingluo"
+    },
+	 "info":[
+     {
+         "id":"1",
+         "Author": "Ding Luo",
+         "Date": "12/06/2017",
+         "Introduction":"Graduated with unique education background in both technology and management, I am now a full-time graduate student in information management at University of Washington. I have 1 year internship experience in analytics at various world-famous consulting firms and want to become a business analyst in the future.",
+         "image": "ding.jpg",
+         "Source": "Rotten Tomatoes, IMDb, Wikipedia",
+         "Page": "This page is about top 10 horror movies collected by Ding. Ding is a big fan of horror movies and if you want to know more about excellent horror movies, feel free to contact with her! ",
+         "Instructors": "Boiko,Robert B & Karan Murthy"
+     }
+     ]
+}

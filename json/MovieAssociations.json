@@ -1,0 +1,139 @@
+var movieAssociations={
+    "about": {
+        "netId": "dingluo"
+    },
+    "associations": [
+        {
+            "id": "1",
+            "name": "Get Out (2017)",
+            "relatedMovies": [
+                {
+                    "movieId": "2",
+                    "movieName": "THE CABINET OF DR. CALIGARI"
+                },
+                {
+                    "movieId": "4",
+                    "movieName": "NOSFERATU, A SYMPHONY OF HORROR"
+                }
+            ]
+        },
+        {
+            "id": "2",
+            "name": "THE CABINET OF DR. CALIGARI",
+            "relatedMovies": [
+                {
+                    "movieId": "1",
+                    "movieName": "Get Out (2017)"
+                },
+                {
+                    "movieId": "5",
+                    "movieName": "KING KONG"
+                }
+            ]
+        },
+        {
+            "id": "3",
+            "name": "Psycho",
+            "relatedMovies": [
+                {
+                    "movieId": "9",
+                    "movieName": "FRANKENSTEIN"
+                },
+                {
+                    "movieId": "10",
+                    "movieName": "ROSEMARY'S BABY"
+                }
+            ]
+        },
+        {
+            "id": "4",
+            "name": "NOSFERATU, A SYMPHONY OF HORROR",
+            "relatedMovies": [
+                {
+                    "movieId": "1",
+                    "movieName": "Get Out (2017)"
+                },
+                {
+                    "movieId": "5",
+                    "movieName": "KING KONG"
+                }
+            ]
+        },
+        {
+            "id": "5",
+            "name": "KING KONG",
+            "relatedMovies": [
+                {
+                    "movieId": "2",
+                    "movieName": "THE CABINET OF DR. CALIGARI"
+                },
+                {
+                    "movieId": "4",
+                    "movieName": "NOSFERATU, A SYMPHONY OF HORROR"
+                }
+            ]
+        },
+        {
+            "id": "6",
+            "name": "REPULSION",
+            "relatedMovies": [
+                {
+                    "movieId": "7",
+                    "movieName": "The Bride of Frankenstein"
+                },
+                {
+                    "movieId": "8",
+                    "movieName": "THE BABADOOK"
+                }
+            ]
+        },
+        {
+            "id": "7",
+            "name": "",
+            "relatedMovies": [
+                {
+                    "movieId": "6",
+                    "movieName": "REPULSION"
+                }
+            ]
+        },
+        {
+            "id": "8",
+            "name": "THE BABADOOK",
+            "relatedMovies": [
+                {
+                    "movieId": "6",
+                    "movieName": "REPULSION"
+                },
+                {
+                    "movieId": "9",
+                    "movieName": "FRANKENSTEIN"
+                }
+            ]
+        },
+        {
+            "id": "9",
+            "name": "FRANKENSTEIN",
+            "relatedMovies": [
+                {
+                    "movieId": "3",
+                    "movieName": "Psycho"
+                },
+                {
+                    "movieId": "8",
+                    "movieName": "THE BABADOOK"
+                }
+            ]
+        },
+        {
+            "id": "10",
+            "name": "FRANKENSTEIN",
+            "relatedMovies": [
+                {
+                    "movieId": "3",
+                    "movieName": "Psycho"
+                }
+            ]
+        }
+    ]
+}

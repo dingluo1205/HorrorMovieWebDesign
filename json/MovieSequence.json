@@ -1,0 +1,37 @@
+var movieSequences={
+    "about": {
+        "netId": "dingluo"
+    },
+    "sequences": [
+        {
+            "seqName": "Silent Film",
+            "movies": [
+                {
+                    "movieLabel": "Fantasy",
+                    "movieName": "NOSFERATU, A SYMPHONY OF HORROR",
+                    "movieId": "4"
+                },
+                {
+                    "movieLabel": "Drama",
+                    "movieName": "FRANKENSTEIN",
+                    "movieId": "9"
+                }
+            ]
+        },
+        {
+            "seqName": "Drama",
+            "movies": [
+                {
+                    "movieLabel": "Action",
+                    "movieName": "KING KONG",
+                    "movieId": "5"
+                },
+                {
+                    "movieLabel": "Thriller",
+                    "movieName": "ROSEMARY'S BABY",
+                    "movieId": "10"
+                }
+            ]
+        }       
+    ]
+}

@@ -1,0 +1,73 @@
+var yearIndex={
+    "about": {
+        "netId": "dingluo"
+    },
+    "years": [
+        {
+            "yearName": "1920-1940",
+            "movies": [
+                {
+                    "movieName": "Frankenstein",
+                    "movieId": "9"
+                },
+                {
+                    "movieName": "Nosferatu",
+                    "movieId": "4"
+                },
+                {
+                    "movieName": "The Bride of Frankenstein",
+                    "movieId": "7"
+                },
+                {
+                    "movieName": "The Cabinet of Dr. Caligari" ,
+                    "movieId": "2"
+                }
+
+            ]
+        },
+        {
+            "yearName": "1940-1960",
+            "movies": [
+                {
+                    "movieName": "Psycho",
+                    "movieId": "3"
+                }
+            ]
+        },
+                {
+            "yearName": "1960-1980",
+            "movies": [
+                {
+                    "movieName": "Repulsion" ,
+                    "movieId": "6"
+                },
+                    {
+                    "movieName":"Rosemary's Baby",
+                    "movieId": "10"
+                }
+
+            ]
+
+        },
+             {
+            "yearName": "1980-present",
+            "movies": [
+                {
+                    "movieName": "Get Out",
+                    "movieId": "1"
+                },
+                    {
+                    "movieName": "King Kong",
+                    "movieId": "5"
+                },
+                {
+                    "movieName": "The Babadook",
+                    "movieId": "8"
+                }
+
+
+            ]
+            
+        }            
+    ]
+}
